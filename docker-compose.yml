@@ -11,6 +11,6 @@ services:
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: postgres
     volumes:
-      - /home/melih_demircan/dinamobet/customPostgresql.conf:/var/lib/postgresql/data/pg_hba.conf
+      - postgresqldata:/var/lib/postgresql/data
     ports:
       - "5434:5432"
