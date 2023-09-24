@@ -15,7 +15,8 @@ import java.util.stream.Collectors;
 
 public class DinamobetRulet implements Runnable {
 
-    private final String DB_DOMAIN = "jdbc:postgresql://localhost:5432/postgres";
+    private final String DB_DOMAIN = "jdbc:postgresql://localhost:5434/postgres";
+    //private final String DB_DOMAIN = "jdbc:postgresql://34.28.232.39:5434/postgres";
     private final String DB_PASSWORD = "admin";
     private String url;
     private String domain;

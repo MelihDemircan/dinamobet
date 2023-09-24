@@ -9,7 +9,7 @@ public class DinamobetRecentHistory implements Runnable {
 
     private final ReentrantLock lockLightning = new ReentrantLock();
 
-    private final String DB_DOMAIN = "jdbc:postgresql://localhost:5432/postgres";
+    private final String DB_DOMAIN = "jdbc:postgresql://localhost:5434/postgres";
     private final String DB_PASSWORD = "admin";
 
     @Override
