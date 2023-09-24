@@ -5,10 +5,12 @@ services:
   postgres:
     image: postgres:latest
     restart: always
-    container_name: dinamobet
+    container_name: dinamobet_custom
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: postgres
+    volumes:
+      - /home/melih_demircan/dinamobet/customPostgresql.conf:/var/lib/postgresql/data/pg_hba.conf
     ports:
       - "5434:5432"
