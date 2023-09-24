@@ -10,7 +10,6 @@ public class DinamoBetStarter {
 
         System.out.println("Token : " + token);
 
-
         Thread thread = new Thread(new DinamobetRulet(domain + "/tr/game/everymatrix/live/play/47844030144#/", domain, token));
 
         Thread thread1 = new Thread(new DinamobetRulet(domain + "/tr/game/everymatrix/live/play/40892081196#/", domain, token));

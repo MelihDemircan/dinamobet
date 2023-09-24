@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 public class DinamobetRulet implements Runnable {
 
+    private final String DB_DOMAIN = "jdbc:postgresql://localhost:5432/postgres";
     private String url;
     private String domain;
     private String token;
@@ -45,7 +46,7 @@ public class DinamobetRulet implements Runnable {
             page.reload();
             page.waitForTimeout(3000);
 
-            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
+            Connection connection = DriverManager.getConnection(DB_DOMAIN, "postgres", "123456");
             connection.setAutoCommit(false);
 
             while (true) {
@@ -169,7 +170,6 @@ public class DinamobetRulet implements Runnable {
                 for (Integer veri : allNumbers) {
                     preparedStatement.setString(1, UUID.randomUUID().toString());
                     preparedStatement.setInt(2, veri);
-                    // preparedStatement.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
                     preparedStatement.executeUpdate();
                 }
             }
