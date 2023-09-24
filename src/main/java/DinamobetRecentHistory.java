@@ -9,10 +9,13 @@ public class DinamobetRecentHistory implements Runnable {
 
     private final ReentrantLock lockLightning = new ReentrantLock();
 
+    private final String DB_DOMAIN = "jdbc:postgresql://localhost:5432/postgres";
+    private final String DB_PASSWORD = "admin";
+
     @Override
     public void run() {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
+            Connection connection = DriverManager.getConnection(DB_DOMAIN, "postgres", DB_PASSWORD);
             while (true) {
                 lockLightning.lock();
                 update(connection, "live_lightning");

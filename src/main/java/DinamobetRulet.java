@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 public class DinamobetRulet implements Runnable {
 
     private final String DB_DOMAIN = "jdbc:postgresql://localhost:5432/postgres";
+    private final String DB_PASSWORD = "admin";
     private String url;
     private String domain;
     private String token;
@@ -24,7 +25,6 @@ public class DinamobetRulet implements Runnable {
     private final ReentrantLock lockTurkLightning = new ReentrantLock();
     private final ReentrantLock lockXxxtremeLightning = new ReentrantLock();
     private final ReentrantLock lockImmersive = new ReentrantLock();
-
 
     public DinamobetRulet(String url, String domain, String token) {
         this.url = url;
@@ -46,7 +46,7 @@ public class DinamobetRulet implements Runnable {
             page.reload();
             page.waitForTimeout(3000);
 
-            Connection connection = DriverManager.getConnection(DB_DOMAIN, "postgres", "123456");
+            Connection connection = DriverManager.getConnection(DB_DOMAIN, "postgres", DB_PASSWORD);
             connection.setAutoCommit(false);
 
             while (true) {
