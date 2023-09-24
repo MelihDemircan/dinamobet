@@ -24,6 +24,6 @@ public class DinamoBetStarter {
         thread2.start();
         thread3.start();
 
-        
+
     }
 }
