@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    container_name: dinamobet
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    ports:
+      - "5434:5432"
