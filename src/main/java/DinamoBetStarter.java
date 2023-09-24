@@ -19,11 +19,11 @@ public class DinamoBetStarter {
         Thread thread3 = new Thread(new DinamobetRulet(domain + "/tr/game/everymatrix/live/play/8510079294#/", domain, token));
 
         thread.start();
-        thread1.start();
-        thread2.start();
-        thread3.start();
+        //thread1.start();
+        //thread2.start();
+        //thread3.start();
 
-        new Thread(new DinamobetRecentHistory()).start();
+        //new Thread(new DinamobetRecentHistory()).start();
 
 
     }

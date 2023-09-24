@@ -90,10 +90,14 @@ public class DinamobetRulet implements Runnable {
                     Elements recentNumbers = document.getElementsByClass("numbers--2435c").get(0).getElementsByTag("span");
                     for (Element element : recentNumbers) {
                         if (!element.text().contains("x")) {
+
                             comingRecentNumber.add(Integer.valueOf(element.text()));
                             comingAllNumber.add(Integer.valueOf(element.text()));
                         }
+                        System.out.println("element : " + element.text());
                     }
+
+                    System.out.println("New Rule");
 
                     try {
                         Elements otherNumbers = document.getElementsByClass("numbers--2435c").get(1).getElementsByTag("span");
