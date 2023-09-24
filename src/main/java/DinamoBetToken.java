@@ -1,5 +1,3 @@
-package com.detect;
-
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
@@ -8,12 +6,12 @@ import com.microsoft.playwright.options.AriaRole;
 import com.microsoft.playwright.options.Cookie;
 import com.microsoft.playwright.options.LoadState;
 
-public class ChromeToken {
+public class DinamoBetToken {
 
     private final String url;
     private final String urlRulet;
 
-    public ChromeToken(String url, String urlRulet) {
+    public DinamoBetToken(String url, String urlRulet) {
         this.url = url;
         this.urlRulet = urlRulet;
     }
